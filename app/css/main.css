@@ -1,0 +1,21 @@
+h1 {
+  color: #009a82;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 1px; }
+
+#container {
+  width: 600px;
+  margin: 0px auto; }
+  #container p {
+    font-family: Tahoma;
+    font-size: 13px; }
+  #container h1 {
+    font-family: Tahoma;
+    font-size: 25px; }
+  #container h2 {
+    font-family: Halvetica;
+    font-size: 18px; }
+
+#list1 li {
+  list-style: none; }

@@ -1,0 +1,42 @@
+$myMargin: 0px auto;
+$myColor: #009a82;
+$myString: "здесь текст";
+$myFontSize1: 13px;
+$myFontSize2: 18px;
+$myFontSize3: 25px;
+$myWidth: 600px;
+
+
+h1 {
+	color: $myColor;
+	margin: 0;
+	padding: 0;
+	letter-spacing: 1px;
+}
+
+#container {
+	width: $myWidth;
+	margin: $myMargin;
+
+	p {
+		font-family: Tahoma;
+		font-size: $myFontSize1;
+	}
+
+	h1 {
+		font-family: Tahoma;
+		font-size: $myFontSize3;
+	}
+
+	h2 {
+		font-family: Halvetica;
+		font-size: $myFontSize2;
+	}
+}
+
+#list1 {
+	
+	li {
+		list-style: none;
+	}
+}
