@@ -1,13 +1,38 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="ru">
 	<head>
-		<meta charset="UTF-8"/>
-		<meta name="viewport" content="width=device-width"/>
-		<link rel="stylesheet" type="text/css" src="css/main.css"/>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width">
+		<link rel="stylesheet" type="text/css" href="bower/normalize-css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
 		<title>Главная страница</title>
 	</head>
 	<body>
-		<h1>Тестирую JADE!!!</h1>
-		<h2>It's alive! Ура!!!</h2>
+		<wrapper class="mainWrapper">
+			<header class="mainHeader">
+				<wrapper class="container clearfix">
+					<div class="logo"><img src="images/logo.jpg" alt="Лого" class="logo__img"></div>
+					<div class="contacts">
+						<ul class="contacts__list">
+							<li class="contacts__list-item"><a class="contacts__list-link">+7(999)999-99-99</a></li>
+							<li class="contacts__list-item"><a class="contacts__list-link">mail@example.com</a></li>
+						</ul>
+					</div>
+				</wrapper>
+			</header>
+			<div class="container">Testing</div>
+		</wrapper>
+		<footer class="mainFooter">
+			<wrapper class="container clearfix">
+				<div class="logo"><img src="images/logo.jpg" alt="Лого" class="logo__img"></div>
+				<div class="contacts">
+					<ul class="contacts__list">
+						<li class="contacts__list-item"><a class="contacts__list-link">+7(999)999-99-99</a></li>
+						<li class="contacts__list-item"><a class="contacts__list-link">mail@example.com</a></li>
+					</ul>
+				</div>
+			</wrapper>
+		</footer>
 	</body>
 </html>

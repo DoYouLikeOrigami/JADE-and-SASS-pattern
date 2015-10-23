@@ -1,42 +1,129 @@
-$myMargin: 0px auto;
-$myColor: #009a82;
-$myString: "здесь текст";
-$myFontSize1: 13px;
+$mainColor: #222;
+$secondaryColor: #009a82;
+$footerColor: #ccc;
+
+$myFontSize1: 14px;
 $myFontSize2: 18px;
 $myFontSize3: 25px;
-$myWidth: 600px;
 
+$minContainerWidth: 960px;
+$maxContainerWidth: 1200px;
+$logoWidth: 150px;
+$footerHeight: 80px;
 
-h1 {
-	color: $myColor;
-	margin: 0;
-	padding: 0;
-	letter-spacing: 1px;
+$logoFloat: left;
+$contactFloat: right;
+
+html {
+	height: 100%;
 }
 
-#container {
-	width: $myWidth;
-	margin: $myMargin;
+body {
+	height: 100%;
+	font-size: $myFontSize1;
+	color: $mainColor;
+}
 
-	p {
-		font-family: Tahoma;
-		font-size: $myFontSize1;
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+/* Общие классы */
+
+.clearfix:before,
+.clearfix:after {
+	content: " ";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+/* Основные классы */
+
+.mainWrapper {
+	display: block;
+	position: relative;
+	min-height: 100%;
+	height: auto !important;
+
+	&:after {
+		content: "";
+		display: block;
+		height: $footerHeight;
+	}
+}
+
+.container {
+	display: block;
+	position: relative;
+	margin: 0 auto;
+	min-width: $minContainerWidth;
+	max-width: $maxContainerWidth;
+}
+
+	.logo {
+		display: inline-block;
+		position: relative;
+		vertical-align: middle;
+		float: $logoFloat;
+		width: $logoWidth;
+		overflow: hidden;
+
+		&__img {
+			width: 100%;
+		}
 	}
 
-	h1 {
-		font-family: Tahoma;
-		font-size: $myFontSize3;
-	}
-
-	h2 {
-		font-family: Halvetica;
+	.contacts {
+		display: inline-block;
+		position: relative;
+		vertical-align: middle;
+		float: $contactFloat;
 		font-size: $myFontSize2;
 	}
+
+		.contacts__list {
+			display: block;
+			padding: 0;
+			margin: 0;
+
+			&-item {
+				display: block;
+				list-style: none;
+				margin-bottom: 10px;
+			}
+
+				&-item:last-of-type {
+					margin-bottom: 0;
+				}
+
+			&-link {
+				display: block;
+				text-decoration: none;
+				color: $mainColor;
+			}
+		}
+
+/* Main Header */
+.mainHeader {
+	display: block;
+	position: relative;
+	padding: 10px 0;
+	background: $secondaryColor;
 }
 
-#list1 {
-	
-	li {
-		list-style: none;
-	}
+/* Main Footer */
+
+.mainFooter {
+	display: block;
+	position: relative;
+	padding-top: 15px;
+	margin-top: -$footerHeight;
+	height: $footerHeight;
+	background: $footerColor;
 }
+

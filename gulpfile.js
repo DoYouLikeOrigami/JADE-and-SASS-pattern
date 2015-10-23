@@ -51,16 +51,6 @@ gulp.task('sync', function() {
 	});
 });
 
-
-
-gulp.task('watch', function () {
-	gulp.watch([
-		'app/*.html',
-		'app/js/**/*.js',
-		'app/css/**/*.css'
-	]).on('change', browserSync.reload);
-});
-
 /* --------- jade --------- */
 
 gulp.task('jade', function() {
@@ -85,7 +75,7 @@ gulp.task('scss', function () {
 gulp.task('watch', function(){
 	gulp.watch(paths.jade.location, ['jade']);
 	gulp.watch(paths.scss.location, ['scss']);
-	gulp.watch(['app/*.html','app/js/**/*.js','app/css/**/*.css']).on('change', browserSync.reload);
+	gulp.watch(paths.browserSync.watchPaths).on('change', browserSync.reload);
 });
 
 /* --------- default --------- */

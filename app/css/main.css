@@ -1,21 +1,88 @@
-h1 {
-  color: #009a82;
-  margin: 0;
+@charset "UTF-8";
+html {
+  height: 100%; }
+
+body {
+  height: 100%;
+  font-size: 14px;
+  color: #222; }
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box; }
+
+/* Общие классы */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table; }
+
+.clearfix:after {
+  clear: both; }
+
+/* Основные классы */
+.mainWrapper {
+  display: block;
+  position: relative;
+  min-height: 100%;
+  height: auto !important; }
+  .mainWrapper:after {
+    content: "";
+    display: block;
+    height: 80px; }
+
+.container {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  min-width: 960px;
+  max-width: 1200px; }
+
+.logo {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  float: left;
+  width: 150px;
+  overflow: hidden; }
+  .logo__img {
+    width: 100%; }
+
+.contacts {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  float: right;
+  font-size: 18px; }
+
+.contacts__list {
+  display: block;
   padding: 0;
-  letter-spacing: 1px; }
+  margin: 0; }
+  .contacts__list-item {
+    display: block;
+    list-style: none;
+    margin-bottom: 10px; }
+  .contacts__list-item:last-of-type {
+    margin-bottom: 0; }
+  .contacts__list-link {
+    display: block;
+    text-decoration: none;
+    color: #222; }
 
-#container {
-  width: 600px;
-  margin: 0px auto; }
-  #container p {
-    font-family: Tahoma;
-    font-size: 13px; }
-  #container h1 {
-    font-family: Tahoma;
-    font-size: 25px; }
-  #container h2 {
-    font-family: Halvetica;
-    font-size: 18px; }
+/* Main Header */
+.mainHeader {
+  display: block;
+  position: relative;
+  padding: 10px 0;
+  background: #009a82; }
 
-#list1 li {
-  list-style: none; }
+/* Main Footer */
+.mainFooter {
+  display: block;
+  position: relative;
+  padding-top: 15px;
+  margin-top: -80px;
+  height: 80px;
+  background: #ccc; }
